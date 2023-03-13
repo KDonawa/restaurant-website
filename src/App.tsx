@@ -1,7 +1,11 @@
-type Props = {};
+import Navbar from "./components/Navbar";
 
-function App({}: Props) {
-  return <div className="font-serif text-primary">App</div>;
+function App() {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
