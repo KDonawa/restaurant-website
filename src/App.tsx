@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs";
+import Awards from "./components/Awards";
 import ChefsWord from "./components/ChefsWord";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
@@ -14,6 +15,7 @@ function App() {
       <Menu />
       <ChefsWord />
       <Video />
+      <Awards />
     </div>
   );
 }

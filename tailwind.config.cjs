@@ -15,7 +15,7 @@ module.exports = {
         primary: "#dcca87",
         "primary-light": "#f5efdb",
         "gray-light": "#aaaaaa",
-        "gray-dark": "#545454",
+        "gray-dark": "#696868",
       },
       backgroundImage: {
         texture: "url('./assets/images/bg.png')",

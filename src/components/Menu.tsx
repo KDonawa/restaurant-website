@@ -78,7 +78,7 @@ function MenuItem({
     <li className="">
       <div className="mb-1 flex items-center gap-5">
         <div className="relative">
-          <span className="font-serif text-primary">{title}</span>
+          <span className="text-1">{title}</span>
         </div>
 
         <div className="h-[1px] flex-1 bg-gray-light" />
@@ -86,7 +86,7 @@ function MenuItem({
         <div className="font-serif">${price}</div>
       </div>
 
-      <div className="text-xs text-gray-dark">{tags}</div>
+      <div className="text-3">{tags}</div>
     </li>
   );
 }

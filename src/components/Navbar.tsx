@@ -12,7 +12,7 @@ function Navbar() {
       <img src={images.gericht} alt="logo" className="t-1 h-8" />
 
       {/* Menu List */}
-      <ul className="text-1 hidden items-center gap-4 lg:flex">
+      <ul className="hidden items-center gap-4 text-xs lg:flex">
         <li className="border-b-primary py-1 px-1.5 hover:border-b hover:text-primary">
           <a href="#home">Home</a>
         </li>
@@ -31,7 +31,7 @@ function Navbar() {
       </ul>
 
       {/* Call to Action */}
-      <div className="text-1 hidden items-center gap-3 sm:flex">
+      <div className="hidden items-center gap-3 text-xs sm:flex">
         <a
           className="border-b-primary py-1 px-1.5 hover:border-b hover:text-primary"
           href="#login"

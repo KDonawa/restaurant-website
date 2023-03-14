@@ -12,10 +12,13 @@
     @apply w-fit bg-primary px-3 py-1.5 font-serif font-semibold text-black hover:bg-primary-light;
   }
   .text-1 {
-    @apply text-xs;
+    @apply font-serif text-primary;
   }
   .text-2 {
     @apply text-sm italic text-gray-dark;
+  }
+  .text-3 {
+    @apply text-xs text-gray-dark;
   }
   .heading-2 {
     @apply font-serif text-4xl font-semibold text-primary;
