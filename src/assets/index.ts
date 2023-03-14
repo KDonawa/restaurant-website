@@ -23,7 +23,7 @@ import quote from "./images/quote.png";
 import gericht from "./images/gericht.png";
 
 // VIDEOS
-import mealVideo from "./videos/meal.mp4";
+import meal from "./videos/meal.mp4";
 
 export const images = {
   bg,
@@ -50,4 +50,4 @@ export const images = {
   gericht,
 };
 
-export const videos = { mealVideo };
+export const videos = { meal };

@@ -3,6 +3,7 @@ import ChefsWord from "./components/ChefsWord";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
+import Video from "./components/Video";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AboutUs />
       <Menu />
       <ChefsWord />
+      <Video />
     </div>
   );
 }
