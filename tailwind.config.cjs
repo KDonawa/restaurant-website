@@ -17,6 +17,9 @@ module.exports = {
         "gray-light": "#aaaaaa",
         "gray-dark": "#545454",
       },
+      backgroundImage: {
+        texture: "url('./assets/images/bg.png')",
+      },
     },
   },
   plugins: [],
