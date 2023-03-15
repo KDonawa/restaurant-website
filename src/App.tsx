@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Video from "./components/Video";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Awards />
       <Gallery />
       <FindUs />
+      <Footer />
     </div>
   );
 }

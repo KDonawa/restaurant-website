@@ -15,7 +15,7 @@ function Heading1({ children, className, spoonPos = "left" }: Props) {
     <div className={className}>
       <div className="flex w-fit flex-col gap-1">
         <span className="font-serif font-semibold">{children}</span>
-        <img src={images.spoon} alt="spoon" className={`w-8 ${pos}`} />
+        <img src={images.spoon} alt="spoon" className={`w-6 ${pos}`} />
       </div>
     </div>
   );
