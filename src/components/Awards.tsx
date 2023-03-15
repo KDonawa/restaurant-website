@@ -4,7 +4,10 @@ import Heading from "./shared/Heading";
 
 function Awards() {
   return (
-    <section className="relative flex items-center justify-center bg-texture py-20">
+    <section
+      id="awards"
+      className="relative flex items-center justify-center bg-texture py-20"
+    >
       <img
         src={images.logo}
         alt=""

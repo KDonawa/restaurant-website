@@ -4,7 +4,7 @@ import Heading from "./shared/Heading";
 
 function Menu() {
   return (
-    <section className="flex items-center justify-center py-20">
+    <section id="menu" className="flex items-center justify-center py-20">
       <div className="mx-[8vw] flex flex-col items-center gap-8 sm:w-[900px]">
         <Heading
           main="Today's Special"

@@ -3,7 +3,7 @@ import SubHeading from "./shared/SubHeading";
 
 function Hero() {
   return (
-    <section className="my-[5vw]">
+    <section id="home" className="my-[5vw]">
       <div className="flex grid-cols-2 flex-col items-center px-[12vw] sm:px-28 md:px-44 lg:grid lg:px-24 xl:px-48">
         <div className="flex flex-col gap-5 pb-10 lg:p-14">
           <SubHeading>Chase The New Flavor</SubHeading>

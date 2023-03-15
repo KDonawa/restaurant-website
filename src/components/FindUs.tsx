@@ -3,7 +3,10 @@ import Heading from "./shared/Heading";
 
 function FindUs() {
   return (
-    <section className="flex items-center justify-center bg-texture py-20">
+    <section
+      id="contact"
+      className="flex items-center justify-center bg-texture py-20"
+    >
       <div className="mx-[8vw] flex grid-cols-2 flex-col items-center gap-16 sm:w-[500px] md:mx-0 md:grid md:w-[700px] md:items-start lg:w-[800px] xl:w-4/6">
         <div className="flex flex-col gap-7">
           <Heading main="Find Us" sub="Contact" />

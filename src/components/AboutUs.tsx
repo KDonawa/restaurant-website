@@ -2,7 +2,10 @@ import { images } from "@/assets";
 
 function AboutUs() {
   return (
-    <section className="relative flex flex-col items-center gap-16 bg-texture py-28 px-16 sm:px-32 md:flex-row md:gap-10 md:px-16 lg:px-32 xl:px-64">
+    <section
+      id="about"
+      className="relative flex flex-col items-center gap-16 bg-texture py-28 px-16 sm:px-32 md:flex-row md:gap-10 md:px-16 lg:px-32 xl:px-64"
+    >
       <img
         src={images.G}
         alt=""
