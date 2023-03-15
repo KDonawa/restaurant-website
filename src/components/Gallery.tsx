@@ -5,7 +5,7 @@ import {
   BsArrowRightShort,
   BsInstagram,
 } from "react-icons/bs";
-import Heading1 from "./shared/Heading1";
+import Heading from "./shared/Heading";
 
 function Gallery() {
   const scrollRef = useRef<HTMLUListElement>(null);
@@ -15,10 +15,7 @@ function Gallery() {
       <div className="flex w-9/12 grid-cols-3 flex-col items-center gap-20 lg:grid lg:gap-10">
         {/* Description */}
         <div className="col-span-1 flex flex-col gap-5 self-center">
-          <div className="flex flex-col gap-2">
-            <Heading1>Instagram</Heading1>
-            <h2 className="heading-2">Photo Gallery</h2>
-          </div>
+          <Heading main="Photo Gallery" sub="Instagram" />
 
           <p className="text-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat

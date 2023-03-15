@@ -1,15 +1,16 @@
-import Heading1 from "./shared/Heading1";
 import { useState } from "react";
+import Heading from "./shared/Heading";
 
 function Newsletter() {
   const [email, setEmail] = useState("");
 
   return (
     <div className="flex flex-col items-center gap-6 text-center">
-      <div className="flex flex-col items-center gap-2">
-        <Heading1 spoonPos="center">Newsletter</Heading1>
-        <h2 className="heading-2 tracking-wide">Subscribe To Our Newsletter</h2>
-      </div>
+      <Heading
+        main="Subscribe To Our Newsletter"
+        sub="Newsletter"
+        align="center"
+      />
 
       <div className="text-xs text-gray-light">
         And never miss the latest updates!

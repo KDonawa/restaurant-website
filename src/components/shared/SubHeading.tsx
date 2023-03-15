@@ -6,7 +6,7 @@ type Props = {
   spoonPos?: "left" | "right" | "center";
 };
 
-function Heading1({ children, className, spoonPos = "left" }: Props) {
+function SubHeading({ children, className, spoonPos = "left" }: Props) {
   let pos = "";
   if (spoonPos === "right") pos = "ml-auto rotate-180";
   if (spoonPos === "center") pos = "mx-auto";
@@ -21,4 +21,4 @@ function Heading1({ children, className, spoonPos = "left" }: Props) {
   );
 }
 
-export default Heading1;
+export default SubHeading;

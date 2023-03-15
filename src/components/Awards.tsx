@@ -1,6 +1,6 @@
 import { images } from "@/assets";
 import { awards } from "@/data";
-import Heading1 from "./shared/Heading1";
+import Heading from "./shared/Heading";
 
 function Awards() {
   return (
@@ -13,10 +13,7 @@ function Awards() {
 
       <div className="flex grid-cols-2 flex-col items-center gap-16 px-[8vw] sm:w-[450px] sm:px-0 md:w-[500px] lg:grid lg:w-9/12 lg:gap-10">
         <div className="flex flex-col justify-center gap-14">
-          <div className="flex flex-col gap-2">
-            <Heading1>Awards & Recognition</Heading1>
-            <h2 className="heading-2">Our Awards</h2>
-          </div>
+          <Heading main="Our Awards" sub="Awards & Recognition" />
 
           <ul className="grid gap-x-5 gap-y-10 sm:grid-cols-2">
             {awards.map((award, i) => (

@@ -1,15 +1,16 @@
 import { images } from "@/assets";
 import { menu } from "@/data";
-import Heading1 from "./shared/Heading1";
+import Heading from "./shared/Heading";
 
 function Menu() {
   return (
     <section className="flex items-center justify-center py-20">
       <div className="mx-[8vw] flex flex-col items-center gap-8 sm:w-[900px]">
-        <div className="mb-5 flex flex-col items-center gap-2">
-          <Heading1 spoonPos="center">Menu That Fits Your Palette</Heading1>
-          <h2 className="heading-2">Today's Special</h2>
-        </div>
+        <Heading
+          main="Today's Special"
+          sub="Menu That Fits Your Palette"
+          align="center"
+        />
 
         <div className="grid gap-10 md:grid-cols-2 md:gap-16 lg:grid-cols-3 lg:gap-5">
           {/* Wines */}

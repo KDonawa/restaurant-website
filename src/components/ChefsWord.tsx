@@ -1,5 +1,5 @@
 import { images } from "@/assets";
-import Heading1 from "./shared/Heading1";
+import Heading from "./shared/Heading";
 
 function ChefsWord() {
   return (
@@ -8,10 +8,7 @@ function ChefsWord() {
         <img src={images.chef} alt="chef" className="w-[400px] md:w-auto" />
 
         <div className="order-first flex flex-col gap-10 md:order-none">
-          <div>
-            <Heading1 className="mb-2">Chef's Word</Heading1>
-            <h2 className="heading-2">What We Believe In</h2>
-          </div>
+          <Heading main="What We Believe In" sub="Chef's Word" />
 
           <div>
             <img
