@@ -8,6 +8,7 @@
   html {
     -webkit-tap-highlight-color: transparent;
   }
+
   .btn {
     @apply w-fit bg-primary px-3 py-1.5 font-serif font-semibold text-black hover:bg-primary-light;
   }
@@ -22,5 +23,9 @@
   }
   .heading-2 {
     @apply font-serif text-4xl font-semibold text-primary;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
   }
 }
