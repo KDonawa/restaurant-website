@@ -1,6 +1,7 @@
 import AboutUs from "./components/AboutUs";
 import Awards from "./components/Awards";
 import ChefsWord from "./components/ChefsWord";
+import FindUs from "./components/FindUs";
 import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
@@ -18,6 +19,7 @@ function App() {
       <Video />
       <Awards />
       <Gallery />
+      <FindUs />
     </div>
   );
 }
