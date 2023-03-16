@@ -2,6 +2,8 @@
 
 [Live Demo](https://kdonawa-restaurant.netlify.app/)
 
+[![Image](https://raw.githubusercontent.com/KDonawa/restaurant-website/main/src/assets/images/home.png)](https://kdonawa-restaurant.netlify.app/)
+
 ### Technologies Used
 
 <div>
