@@ -1,4 +1,5 @@
 import { images } from "@/assets";
+import { motion } from "framer-motion";
 
 function AboutUs() {
   return (
@@ -11,7 +12,19 @@ function AboutUs() {
         alt=""
         className="absolute top-1/2 left-1/2 w-80 -translate-x-1/2 -translate-y-1/2"
       />
-      <div className="z-10 flex flex-col items-center gap-3 md:items-end">
+
+      {/* About Us */}
+      <motion.div
+        className="z-10 flex flex-col items-center gap-3 md:items-end"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+      >
         <div className="flex w-fit flex-col gap-1">
           <h2 className="heading-2">About Us</h2>
           <img
@@ -26,17 +39,37 @@ function AboutUs() {
           aliquet eu proin mauris et.
         </p>
         <button className="btn hidden md:block">Know More</button>
-      </div>
+      </motion.div>
 
-      <img
+      {/* Knife Image */}
+      <motion.img
         src={images.knife}
         alt=""
         className="z-10 hidden h-[600px] md:block"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, delay: 1 }}
+        variants={{
+          hidden: { opacity: 0, y: 250 },
+          visible: { opacity: 1, y: 0 },
+        }}
       />
 
       <button className="btn z-10 mx-auto md:hidden">Know More</button>
 
-      <div className="z-10 flex flex-col items-center gap-3 md:items-start">
+      {/* Our History */}
+      <motion.div
+        className="z-10 flex flex-col items-center gap-3 md:items-start"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+      >
         <div className="flex w-fit flex-col gap-1">
           <h2 className="heading-2">Our History</h2>
           <img src={images.spoon} alt="spoon" className="w-8" />
@@ -47,7 +80,7 @@ function AboutUs() {
           odio nec aliquet.
         </p>
         <button className="btn hidden md:block">Know More</button>
-      </div>
+      </motion.div>
     </section>
   );
 }

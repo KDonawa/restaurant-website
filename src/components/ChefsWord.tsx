@@ -1,13 +1,28 @@
 import { images } from "@/assets";
 import Heading from "./shared/Heading";
+import { motion } from "framer-motion";
 
 function ChefsWord() {
   return (
     <section className="flex items-center justify-center bg-texture py-20">
       <div className="mx-[8vw] flex grid-cols-2 flex-col items-center gap-16 sm:w-[500px] md:mx-0 md:grid md:w-[700px] md:items-start lg:w-[800px] xl:w-4/6">
-        <img src={images.chef} alt="chef" className="w-[400px] md:w-auto" />
+        <motion.img
+          src={images.chef}
+          alt="chef"
+          className="w-[400px] md:w-auto"
+        />
 
-        <div className="order-first flex flex-col gap-10 md:order-none">
+        <motion.div
+          className="order-first flex flex-col gap-10 md:order-none"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.25 }}
+          variants={{
+            hidden: { opacity: 0, x: 50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <Heading main="What We Believe In" sub="Chef's Word" />
 
           <div>
@@ -31,7 +46,7 @@ function ChefsWord() {
           </div>
 
           <img src={images.sign} alt="chef-signature" className="w-40" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

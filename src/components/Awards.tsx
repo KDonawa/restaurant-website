@@ -1,6 +1,7 @@
 import { images } from "@/assets";
 import { awards } from "@/data";
 import Heading from "./shared/Heading";
+import { motion } from "framer-motion";
 
 function Awards() {
   return (
@@ -18,16 +19,35 @@ function Awards() {
         <div className="flex flex-col justify-center gap-14">
           <Heading main="Our Awards" sub="Awards & Recognition" />
 
-          <ul className="grid gap-x-5 gap-y-10 sm:grid-cols-2">
+          <motion.ul
+            className="grid gap-x-5 gap-y-10 sm:grid-cols-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 1 },
+              },
+            }}
+          >
             {awards.map((award, i) => (
-              <Award
+              <motion.li
                 key={i}
-                imageUrl={award.imageUrl}
-                title={award.title}
-                subtitle={award.subtitle}
-              />
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 },
+                }}
+              >
+                <Award
+                  imageUrl={award.imageUrl}
+                  title={award.title}
+                  subtitle={award.subtitle}
+                />
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
 
         <img
@@ -50,13 +70,13 @@ function Award({
   subtitle: string;
 }) {
   return (
-    <li className="flex w-fit gap-2">
+    <div className="flex gap-2">
       <img src={imageUrl} alt="award" className="h-12 w-12" />
       <div className="flex flex-col">
         <span className="text-1">{title}</span>
         <span className="text-3">{subtitle}</span>
       </div>
-    </li>
+    </div>
   );
 }
 

@@ -1,6 +1,7 @@
 import { images } from "@/assets";
 import { menu } from "@/data";
 import Heading from "./shared/Heading";
+import { motion } from "framer-motion";
 
 function Menu() {
   return (
@@ -14,7 +15,17 @@ function Menu() {
 
         <div className="grid gap-10 md:grid-cols-2 md:gap-16 lg:grid-cols-3 lg:gap-5">
           {/* Wines */}
-          <div className="flex flex-col gap-5">
+          <motion.div
+            className="flex flex-col gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.75 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
+          >
             <h3 className="self-center font-serif text-2xl font-semibold">
               Wine & Beer
             </h3>
@@ -31,16 +42,34 @@ function Menu() {
                 );
               })}
             </ul>
-          </div>
+          </motion.div>
 
-          <img
+          <motion.img
             src={images.menu}
             alt="menu"
             className="block h-[400px] justify-self-center md:hidden lg:block"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.75, delay: 0.75 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
           />
 
           {/* Cocktails */}
-          <div className="flex flex-col gap-5">
+          <motion.div
+            className="flex flex-col gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.75, delay: 1.5 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
+          >
             <h3 className="self-center font-serif text-2xl font-semibold">
               Cocktails
             </h3>
@@ -57,7 +86,7 @@ function Menu() {
                 );
               })}
             </ul>
-          </div>
+          </motion.div>
         </div>
 
         <button className="btn">View More</button>

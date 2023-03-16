@@ -6,6 +6,7 @@ import {
   BsInstagram,
 } from "react-icons/bs";
 import Heading from "./shared/Heading";
+import { motion } from "framer-motion";
 
 function Gallery() {
   const scrollRef = useRef<HTMLUListElement>(null);
@@ -14,7 +15,17 @@ function Gallery() {
     <section className="flex items-center justify-center py-20">
       <div className="flex w-9/12 grid-cols-3 flex-col items-center gap-20 lg:grid lg:gap-10">
         {/* Description */}
-        <div className="col-span-1 flex flex-col gap-5 self-center">
+        <motion.div
+          className="col-span-1 flex flex-col gap-5 self-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.75, delay: 0.25 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <Heading main="Photo Gallery" sub="Instagram" />
 
           <p className="text-3">
@@ -23,10 +34,20 @@ function Gallery() {
           </p>
 
           <button className="btn">View More</button>
-        </div>
+        </motion.div>
 
         {/* Gallery */}
-        <div className="relative col-span-2 h-[350px] w-[230px] select-none justify-self-center sm:h-[300px] sm:w-[460px] md:w-[680px] lg:w-[460px] xl:w-[680px]">
+        <motion.div
+          className="relative col-span-2 h-[350px] w-[230px] select-none justify-self-center sm:h-[300px] sm:w-[460px] md:w-[680px] lg:w-[460px] xl:w-[680px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 2, delay: 1 }}
+          variants={{
+            hidden: { opacity: 0, x: 100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <BsArrowLeftShort
             className="absolute bottom-3 left-2 z-10 h-7 w-7 cursor-pointer rounded-sm bg-black"
             onClick={scrollLeft}
@@ -50,7 +71,7 @@ function Gallery() {
             className="absolute bottom-3 right-2 z-10 h-7 w-7 cursor-pointer rounded-sm bg-black"
             onClick={scrollRight}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
