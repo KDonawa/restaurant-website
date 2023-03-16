@@ -14,6 +14,10 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40"/>
 </div>
 
+### Acknowledgements
+
+Design inspired from the Gericht - Restaurant Website
+
 ### License
 
 Copyright &copy; 2023 Kerron Donawa
