@@ -82,7 +82,9 @@ function Footer() {
       {/* Copyright */}
       <div>
         <div className="text-3 italic">2021 Gerícht. All Rights reserved.</div>
-        <div className="text-3 mt-2 italic">&copy; Kerron Donawa</div>
+        <div className="text-3 mt-2 italic">
+          Copyright &copy; {new Date().getFullYear()} Kerron Donawa
+        </div>
       </div>
     </section>
   );
